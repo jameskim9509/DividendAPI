@@ -6,8 +6,8 @@ build/
 !**/src/test/**/build/
 
 ### LOG ###
-.log
-.log.gz
+*.log
+*.log.gz
 
 ### STS ###
 .apt_generated
