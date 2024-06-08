@@ -36,6 +36,7 @@ public class YahooFinanceScraper implements Scraper {
 
             String url = String.format(STATISTICS_URL, company.getTicker(), START_TIME, now);
             Connection connection = Jsoup.connect(url)
+                    .timeout(10 * 1000)
                     .userAgent("Mozilla/5.0 Firefox");
 
             Document document = connection.get();
