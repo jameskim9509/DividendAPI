@@ -4,6 +4,7 @@ import com.dayone.model.Company;
 import com.dayone.model.Dividend;
 import com.dayone.model.ScrapedResult;
 import com.dayone.model.constants.Month;
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -12,16 +13,15 @@ import org.jsoup.select.Elements;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 @Component
 public class YahooFinanceScraper implements Scraper {
 
     private static final String STATISTICS_URL = "https://finance.yahoo.com/quote/%s/history/?period1=%d&period2=%d&frequency=1mo";
-//    private static final String SUMMARY_URL = "https://finance.yahoo.com/quote/%s?p=%s";
     private static final String SUMMARY_URL = "https://finance.yahoo.com/quote/%s/";
 
     private static final long START_TIME = 86400;   // 60 * 60 * 24
@@ -73,8 +73,7 @@ public class YahooFinanceScraper implements Scraper {
 
             scrapResult.setDividends(dividends);
         } catch (IOException e) {
-            // TODO error handling
-            e.printStackTrace();
+            log.error("Dividend scrap error : {}", e.getMessage());
         }
 
         return scrapResult;
@@ -94,7 +93,7 @@ public class YahooFinanceScraper implements Scraper {
 
             return new Company(ticker, title);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("Company scrap error : {}", e.getMessage());
         }
         return null;
     }
