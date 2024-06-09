@@ -11,7 +11,7 @@
 
 - ## 기술 요구사항
 1. 스레드풀을 이용한 **스케줄러** 관리 및 배당금 정보 **스크랩**( At finance.yahoo.com ) 구현
-2. **JPA Spring Data**를 사용해 Repository 구현
+2. **JPA Spring Data**를 사용해 Repository 구현, **Page** 조회 기능을 활용하여 회사리스트를 페이지 형태로 반환
 3. 사용자 회원가입 시( post /auth/signup ) <br>
    전달된 권한 정보를 통해 해당 권한을 가진 유저 저장 및 **passwordEncoder**를 통한 패스워드 암호화
 4. 사용자 로그인 시 ( post /auth/signin ) <br>
