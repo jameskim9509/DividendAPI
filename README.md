@@ -30,15 +30,15 @@
   * postman
 
 * ## DB 테이블 <br> <br>
-![DB_cap.png](./DB_cap.png)
+<img src = "/DB_cap.png" width="600" height="250">
 
 * ## Postman 사용 예
   * **로그인** <br> <br>
-  ![postman_cap1(signin).png](./postman_cap1(signin).png) <br> <br>
+  <img src = "./postman_cap1(signin).png" width="800" height="400"> <br> <br>
   * **자동완성** <br> <br>
-  ![postman_cap2(autocomplete).png](./postman_cap2(autocomplete).png) <br> <br>
+  <img src = "./postman_cap2(autocomplete).png" width="800" height="400"> <br> <br>
   * **배당금 조회** <br> <br>
-  ![postman_cap3(getDividendList).png](./postman_cap3(getDividendList).png) <br> <br>
+  <img src = "./postman_cap3(getDividendList).png" width="800" height="400"> <br> <br>
 
 * ## Redis 서버 캐시 확인
-![Redis_cap.png](./Redis_cap.png)
+<img src = "./Redis_cap.png" width="800" height="200"> <br> <br>
