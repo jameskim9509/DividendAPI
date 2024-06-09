@@ -85,6 +85,7 @@ public class CompanyService {
     public List<String> autocomplete(String keyword) {
         return (List<String>) this.trie.prefixMap(keyword).keySet()
                 .stream()
+                .limit(10)
                 .collect(Collectors.toList());
     }
 
